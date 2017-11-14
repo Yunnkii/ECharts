@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id='main' width="500px" height="400px"></canvas>
+	<script>
+		(function () {
+			var canvas = document.getElementById('main');
+			var context = canvas.getContext('2d');
+			//设置线的宽度
+			// context.lineWidth = 20;
+			// context.strokeStyle = "rgb(205,40,40)" ;
+
+			//绘制一条线，使用默认的方头
+			// context.moveTo(10,50); //起点
+			// context.lineTo(400,50);
+			// context.lineCap = "butt" ; //线头的样式
+			// context.stroke(); //画出这条线
+
+			//绘制第二条线，使用圆头
+			// context.beginPath();
+			// context.moveTo(10,120);
+			// context.lineTo(400,120);
+			// context.lineCap = "round";
+			// context.stroke();
+
+			//绘制第三条线
+
+			// context.beginPath();
+			// context.moveTo(10,190);
+			// context.lineTo(400,190);
+			// context.lineCap = "square";
+			// context.stroke();
+
+
+			//绘制一个三角形
+			// context.beginPath();
+			// context.moveTo(250,50);
+			// context.lineTo(50,250);
+			// context.lineTo(450,250);
+			// context.closePath();
+			// context.lineWidth = 10;
+
+			//填充颜色
+			// context.fillStyle = "blue";
+			// context.fill();
+
+			//绘制轮廓
+			// context.strokeStyle = "red" ;
+			// context.stroke();
+
+			// var centerX = 150;
+			// var centerY = 300;
+			// var radius = 100;
+			// var startingAngle = 1.25*Math.PI;
+			// var endingAngle = 1.75*Math.PI;
+			
+
+			// //
+			// context.arc(centerX,centerY,radius,startingAngle,endingAngle);
+			// context.stroke();
+			// context.moveTo(62,242);
+			// var control1_X = 187;
+			// var control1_Y = 32;
+			// var control2_X = 429;
+			// var control2_Y = 480;
+			// var endPointX = 365;
+			// var endPointY = 133;
+			// context.bezierCurveTo(control1_X,control1_Y,control2_X,control2_Y,endPointX,endPointY);
+			// context.stroke();
+			// context.rect(0,0,30,30);
+			// context.rect(50,50,30,30);
+			// context.rect(100,100,30,30);
+			// context.translate(60,50);
+			// context.rect(0,0,30,30);
+
+			// context.translate(50,50);
+			// context.rect(0,0,30,30);
+
+			// context.stroke();
+
+			context.translate(100,100);
+
+			var copies = 10;
+			for(var i = 0;i<copies;i++) {
+				context.rotate(2*Math.PI*1/(copies));
+
+				context.rect(0,0,60,60);
+			}
+
+			context.stroke();
+			
+		})()
+	</script>
+</body>
+</html>
